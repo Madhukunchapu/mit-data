@@ -90,24 +90,21 @@ class Physical extends Component {
 
     render() {
         return (
-            <div className="container mt-5">
-                <div className="row">
+            <>
+            <div>
+                <img src="home1.jpg" alt="" height="656px" width="100%" />
+
+            </div>
+            <div className="container list3 mt-5">          
+                  <div className="row">
                     <div className="col-lg-1"></div>
                     <div className="col-lg-10">
-                        <div className="text-primary text-center">
-
-                            <h2> <i className="fa fa-handshake-o"></i> You are Welcome </h2>
-                        </div>
+                        
                         <p className="text-center ">{this.state.message}</p>
                         <form onSubmit={this.register}>
                             <div className="card">
                                 <div className="card-header bg-light text-danger">
-                                    <i className="fa fa-user-plus fa-lg"></i> Register
-                                    <label className="fa-pull-right">
-                                        <Link to="/" className="text-warning">
-                                            <i className="fa fa-lock"></i> Already Register ?
-                                        </Link>
-                                    </label>
+                                   <h2>Physical Development</h2>
                                 </div>
                                 <div className="card-body">
                                     <div className="container">
@@ -153,7 +150,7 @@ class Physical extends Component {
                                     </div>
                                 </div>
                                 <div className="card-footer text-center">
-                                    <button type="submit" className="btn btn-danger"> <i className="fa fa-user-plus"></i> Register </button>
+                                    <button type="submit" className="btn btn-danger">  Submit </button>
                                 </div>
                             </div>
                         </form>
@@ -162,6 +159,7 @@ class Physical extends Component {
                     <div className="col-lg-1"></div>
                 </div>
             </div>
+            </>
         )
     }
 }

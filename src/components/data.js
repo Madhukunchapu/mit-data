@@ -65,20 +65,22 @@ import testUtils from 'react-dom/test-utils';
 
 
     return (
+        <>
+        
         <div className="container mt-4">
             <div className="row">
                 <div >
                     <h1 className="text-danger">Student Details</h1>
                     
                 </div>
-                <div>
+                <div className='list2'>
 
                 <details>
                     
                     <summary>ACADEMICS DEVELOPMENT</summary>
                     
                 <table className="table table-bordered">
-                             <thead>
+                             <thead className='text-primary'>
                                 <tr className="text-primary">
                                    <th>RollNumber</th>
                                     <th> StudentName </th>
@@ -293,6 +295,7 @@ import testUtils from 'react-dom/test-utils';
                 </div>
             </div>
         </div>
+        </>
     )
  }
  export default Data;

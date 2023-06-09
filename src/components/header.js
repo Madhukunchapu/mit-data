@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Switch, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Switch, Route, Link } from "react-router-dom";
 import PersonalInfo from './studentslist';
 import Data from './data';
 import Academic from './submissions/academic';
@@ -14,15 +14,17 @@ import Achivements from './submissions/achivements';
 const TopHeader = () => {
     return (
         <>
+            <div>
+                <img src="home1.jpg" alt="" height="650px" width="100%" />
 
-            <nav className="navbar    p-2">
+            </div>
+            <nav className="logindiv2 p-2">
                 <div className="container">
                     <div className="row ">
                         <div className="col-lg-12 ">
                             <nav>
                                 <Link to="/personal" id="menu">PersonalInfo</Link>
                                 <Link to="/:rollNumber/data" id="menu">User Data</Link>
-                                <Link to="/users" id="menu">Users Information</Link>
                                 <Link to="/academic" id="menu">Academic</Link>
                                 <Link to="/emotional" id="menu">Emotional</Link>
                                 <Link to="/skills" id="menu">Skills</Link>
@@ -31,34 +33,51 @@ const TopHeader = () => {
                             </nav>
                         </div>
 
-                        <Routes>
-
-                            <Route path="/personal" element={<PersonalInfo />} />
-                            <Route exact path="/:id/data" element={<Data />} />
-                            <Route exact path="/academic" element={<Academic />} />
-                            <Route exact path="/emotional" element={<Emotional />} />
-                            <Route exact path="/skills" element={<Skills />} />
-                            <Route exact path="/physical" element={<Physical />} />
-                            <Route exact path="/achivements" element={<Achivements/>} />
-
-
-
-
-
-                        </Routes>
-
-
-
 
                     </div>
 
+                    <Routes>
+
+                        <Route path="/personal" element={<PersonalInfo />} />
+                        <Route exact path="/:id/data" element={<Data />} />
+                        <Route exact path="/academic" element={<Academic />} />
+                        <Route exact path="/emotional" element={<Emotional />} />
+                        <Route exact path="/skills" element={<Skills />} />
+                        <Route exact path="/physical" element={<Physical />} />
+                        <Route exact path="/achivements" element={<Achivements />} />
+
+
+
+
+
+                    </Routes>
+
+
+
+
                 </div>
-                <div className="text-end">
-                    <button className="btn btn-white  btn-sm" onClick={Logout}>
-                        <h6><Link to="/"> <i className="fa fa-power-off txt ">Logout</i></Link> </h6>
-                    </button>
-                </div>
+
+
+
+
             </nav>
+
+
+            <div className="menu1">
+                <button className="btn btn-white" onClick={Logout}>
+                    <h4><Link to="/"> <i className="fa fa-power-off  ">Logout</i></Link> </h4>
+                </button>
+
+            </div>
+
+            <div className="menu2">
+
+                Learning is Not attained by chance,<br />
+                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;        it must be sought for<br />
+                &nbsp; &nbsp;&nbsp;&nbsp;                           with ardor and attended to <br />
+                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;                with diligence.
+
+            </div>
         </>
     )
 

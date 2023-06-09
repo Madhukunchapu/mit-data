@@ -115,11 +115,11 @@ class Login extends Component {
                             <div className="card">
                                 <div className="card-header bg-light text-danger">
                                     <i className="fa fa-lock fa-lg"></i>Login
-                                    <label className=" fa fa-pull-right text-warning">
+                                    {/* <label className=" fa fa-pull-right text-warning">
                                         <Link to="/register" className="text-warning">
                                             <i className="fa fa-user-plus"></i>
                                         </Link>
-                                    </label>
+                                    </label> */}
                                 </div>
                                 <div className="card-body">
                                     <div className="mb-3">

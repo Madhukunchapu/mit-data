@@ -14,19 +14,39 @@ code {
 
 nav{
 	margin:5px;
-	padding:15px;
-	display:block;
-	text-align:center;
+	/* padding:15px; */
+	display:grid;
+	/* text-align:center; */
 	
 } 
 
+.logindiv2{
+  position: absolute;
+  top:0.5%;
+  left: 5%;
+  display: flex;
+}
+
+
+
+.logindiv{
+  position: absolute;
+  top:22%;
+  left: 13%;
+}
 
 #menu{
-  margin-left:-5px;
-  padding:20px 35px 20px;
+  /* margin-left:-5px; */
+  padding:20px 25px 20px;
   text-decoration:none;
   font-weight:bold;
-  color: goldenrod;
+  color: rgb(250, 246, 240);
+  border: 2px solid rgba(255, 255, 255, 0.5); 
+  border-radius: 15px;
+  margin: 5px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30 rgba(0, 0,0, 0.5);
+   /* display: flex;  */
 }
 
 #menu:hover{
@@ -41,19 +61,56 @@ color: white;
     color: white;
     }
     
+    .menu2{
+      padding:2px 25px 20px;
+      /* height: 50px; */
+      text-decoration:none;
+      font-weight:bold;
+      border-radius: 15px;
+      margin: 5px;
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      color:rgb(255, 255, 255);
+      font-size: 40px;
+      font-style: italic;
+      justify-content: center;
+      backdrop-filter: blur(2px);
+    }    
+
+    .menu1{
+  padding:2px 25px 20px;
+  height: 50px;
+  text-decoration:none;
+  font-weight:bold;
+  border: 2px solid rgba(255, 255, 255, 0.5); 
+  border-radius: 15px;
+  margin: 5px;
+  position: absolute;
+  margin-left: 85%;
+  top: 10px;
+  justify-content: center;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30 rgba(0, 0,0, 0.5);
+  
+}
+
+.menu1:hover{
+text-decoration:none;
+background:black;
+color: white;
+}
+
+.menu1:focus{
+    text-decoration:none;
+    background:green;
+    color: white;
+    }
+    
 
 
  
 
-.navbar{
-  background: #beedfd;
-  height: 60px;
-}
-h4{
-  margin-left: 150px;
-  margin-top: 2px;
-  font-weight: bold;
-}
 .input__search{
   margin-left: 80px;
 }
@@ -62,62 +119,43 @@ h4{
 }
 .icon{
   padding: 5px;
-  color: #7f8285;
   margin-top: 3px;
   padding-left: 10px;
 }
-.placeholder{
-  width: 500px;
+.placehold{
+  width: 300px;
   font-size: 12px;
   margin-bottom: 10px;
   padding: 5px;
   margin-top: 2px;
   padding-left: 30px;
-  color: #7f8285;
-  border: 1px solid #51c1eb;
-  background: #effbfe;
+  border: none;
+  outline: none;
+  background: #82dafa;
+  border-radius: 5px;
 }
 
-
-.Account{
-  margin-left: 50px;
-}
-.hello{
-  font-size: 10px;
-  margin-bottom: 0;
-  margin-top: 5px;
-  text-align: left;
-  margin-left: 5px;
-}
-.list{
-  font-weight: bold;
-  text-align: left;
-}
-.arrow{
-  margin-left: 5px;
-  font-size: 15px;
-}
-.Returns{
-  margin-left: 30px
-}
-.order{
-  margin-left: 30px;
-  border: 2px solid black;
-  border-radius: 100%;
-  padding: 8px;
-}
-.cart{
-  font-size: 20px;
-}
-.badge{
+.list1{
   position: absolute;
-  margin-left: 15px;
-  background: #fd803a;
+  top:5%;
+  left: 5%;
 }
 
-.txt{
-   color: black; 
-   margin-left: 10px;
+.list2{
+  position: absolute;
+  top:2%;
+  left: 5%;
+  width: 70% !important;
+}
+
+.list3{
+  position: absolute;
+  top:2%;
+  left: 5%;
+  width: 50% !important;
+}
+.tb1{
+  width: 50%;
 }
 
 

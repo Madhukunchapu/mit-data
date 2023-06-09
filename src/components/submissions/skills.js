@@ -134,29 +134,27 @@ class Skills extends Component {
 
     render() {
         return (
-            <div className="container mt-5">
-                <div className="row">
+            <>
+ 
+                <div>
+                    <img src="home1.jpg" alt="" height="700px" width="100%" />
+
+                </div>
+                <div className="container list2 mt-5">      
+                          <div className="row">
                     <div className="col-lg-1"></div>
                     <div className="col-lg-10">
-                        <div className="text-primary text-center">
-
-                            <h2> <i className="fa fa-handshake-o"></i> You are Welcome </h2>
-                        </div>
+                        
                         <p className="text-center ">{this.state.message}</p>
                         <form onSubmit={this.register}>
                             <div className="card">
                                 <div className="card-header bg-light text-danger">
-                                    <i className="fa fa-user-plus fa-lg"></i> Register
-                                    <label className="fa-pull-right">
-                                        <Link to="/" className="text-warning">
-                                            <i className="fa fa-lock"></i> Already Register ?
-                                        </Link>
-                                    </label>
+                                    <h2>Skill/Talent Development</h2>
                                 </div>
                                 <div className="card-body">
                                     <div className="container">
                                         <div className="row">
-                                            <div className="col-lg-12">
+                                            <div className="col-lg-6">
                                                 <div className="mb-3">
                                                     <label>Student Name</label>
                                                    <input type="text" className="form-control"
@@ -196,7 +194,10 @@ class Skills extends Component {
                                                     <small className="text-danger">{this.state.errorList.marksError}</small>
                                                 </div>
 
-                                               <div className="mb-3">
+
+                                            </div>
+                                            <div className="col-lg-6">
+                                            <div className="mb-3">
                                                     <label>Dance</label>
                                                     <input type="text" className="form-control"
                                                         name="dance" onChange={this.processInput}   />
@@ -239,7 +240,7 @@ class Skills extends Component {
                                     </div>
                                 </div>
                                 <div className="card-footer text-center">
-                                    <button type="submit" className="btn btn-danger"> <i className="fa fa-user-plus"></i> Register </button>
+                                    <button type="submit" className="btn btn-danger"> Submit </button>
                                 </div>
                             </div>
                         </form>
@@ -248,6 +249,7 @@ class Skills extends Component {
                     <div className="col-lg-1"></div>
                 </div>
             </div>
+            </>
         )
     }
 }
