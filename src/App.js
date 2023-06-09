@@ -19,12 +19,7 @@ function App() {
   if (localStorage.getItem("userid") == null) {
     var page = <>
       <Routes>
-      {/* <Route exact path="/" element={<TopHeader />} />
-      <Route exact path="/personal" element={<PersonalInfo />} />
-        <Route exact path="/:rollNumber/data" element={<Data />} />
-        */}
         <Route exact path="/" element={<Login />} />
-        {/* <Route exact path="/fghm" element={<Login1 />} /> */}
       </Routes>
     </>
   } else {
