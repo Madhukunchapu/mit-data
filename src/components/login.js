@@ -68,7 +68,7 @@ class Login extends Component {
             var url = "https://mti-school-data.onrender.com/academic";
             axios.get(url).then(response => {
                 for (var i = 0; i < response.data.length; i++) {
-                    if (email == "user@gmail.com" && pass == "1234567") {
+                    if (email == "adminmit@gmail.com" && pass == "admin@~#&*41!") {
                         localStorage.setItem("username", response.data[i].myname);
                         localStorage.setItem("userid", response.data[i].id);
                         localStorage.setItem("password", response.data[i].mypassword);

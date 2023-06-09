@@ -73,7 +73,7 @@ import testUtils from 'react-dom/test-utils';
                     <h1 className="text-danger">Student Details</h1>
                     
                 </div>
-                <div className='list2'>
+                <div>
 
                 <details>
                     
