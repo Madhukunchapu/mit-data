@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import axios from 'axios';
+import axios from 'axios';
+
 class Login extends Component {
 
     constructor() {
@@ -64,17 +65,30 @@ class Login extends Component {
 
 
         if (formStatus == true) {
+            var url = "https://mti-school-data.onrender.com/academic";
+            axios.get(url).then(response => {
+                for (var i = 0; i < response.data.length; i++) {
+                    if (email == "user@gmail.com" && pass == "1234567") {
+                        localStorage.setItem("username", response.data[i].myname);
+                        localStorage.setItem("userid", response.data[i].id);
+                        localStorage.setItem("password", response.data[i].mypassword);
+                        localStorage.setItem("name", response.data[i].myname1);
+                        localStorage.setItem("email", response.data[i].myemail);
+                        localStorage.setItem("mobile", response.data[i].mymobile);
 
-            if (email == "user@gmail.com" && pass == "12345678") {
-                loginStatus = true;
-            }// if end
-            if (loginStatus == true) {
-                this.setState({ message: "Login Sucess ! please wait redirecting..." });
-                window.location.href = "http://localhost:3000/#/";
-                window.location.reload();
-            } else {
-                this.setState({ message: "Login Failed Password Incotrect " });
-            }
+                        loginStatus = true;
+                        break;
+                    }// if end
+                }  // for end
+
+                if (loginStatus == true) {
+                    this.setState({ message: "Login Sucess ! please wait redirecting..." });
+                    window.location.href = "http://localhost:3000/#/";
+                    window.location.reload();
+                } else {
+                    this.setState({ message: "Login Failed Password Incotrect " });
+                }
+            }) // axios get end here
 
         }
 
@@ -92,17 +106,18 @@ class Login extends Component {
                     <img src="loginimage.png" alt="" height="650px" width="100%" />
 
                 </div>
-                <div className="container  logindiv mt-5">            <div className="row">
+                <div className="container  logindiv mt-5">            
+                <div className="row">
                     <div className="col-lg-4"></div>
                     <div className="col-lg-4">
-                        <p className="text-center ">{this.state.message}</p>
+                        <p className="text-center text-danger ">{this.state.message}</p>
                         <form onSubmit={this.login}>
                             <div className="card">
                                 <div className="card-header bg-light text-danger">
                                     <i className="fa fa-lock fa-lg"></i>Login
                                     <label className=" fa fa-pull-right text-warning">
                                         <Link to="/register" className="text-warning">
-                                            <i className="fa fa-user-plus"></i>  New ? Register/signup ?
+                                            <i className="fa fa-user-plus"></i>
                                         </Link>
                                     </label>
                                 </div>
