@@ -1,17 +1,17 @@
 
-
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom'; // after installing the react-router-dom we will have to import it here
 import Login from './components/login';
 import TopHeader from './components/header';
 import PersonalInfo from './components/studentslist';
 import Data from './components/data';
-import Academic from './components/submissions/academic';
-import Emotional from './components/submissions/emotional';
-import Skills from './components/submissions/skills';
-import Physical from './components/submissions/physical';
-import Achivements from './components/submissions/achivements';
-// import Login1 from './components/login1';
+import StepContext from './components/stepContext';
+import Achivements1 from './components/datasubmission/achivements';
+import Emotions from './components/datasubmission/emotionala';
+import Skill from './components/datasubmission/skills';
+import Physical1 from './components/datasubmission/physical';
+import Acadimic1 from './components/datasubmission/acadimic';
+
 
 
 function App() {
@@ -25,14 +25,15 @@ function App() {
   } else {
     var page = <>
       <Routes>
-        <Route exact path="/" element={<TopHeader />} /> 
-         <Route exact path="/personal" element={<PersonalInfo />} />
-        <Route exact path="/:rollNumber/data" element={<Data />} />
-        <Route exact path="/academic" element={<Academic />} />
-        <Route exact path="/emotional" element={<Emotional/>} />
-        <Route exact path="/skills" element={<Skills />} />
-        <Route exact path="/physical" element={<Physical />} />
-        <Route exact path="/achivements" element={<Achivements/>} />
+        <Route exact path="/" element={<TopHeader />} />
+        <Route exact path="/personal" element={<PersonalInfo />} />
+        <Route exact path="/:rollnumber/data" element={<Data />} />
+        <Route exact path="/submission" element={<StepContext />} />
+        <Route exact path="/academic" element={<Acadimic1 />} />
+        <Route exact path="/emotions" element={<Emotions />} />
+        <Route exact path="/skills" element={<Skill />} />
+        <Route exact path="/physical" element={<Physical1 />} />
+        <Route exact path="/achivement" element={<Achivements1 />} />
       </Routes>
     </>
   }
@@ -43,5 +44,6 @@ function App() {
     </HashRouter>
   );
 }
+
 
 export default App;

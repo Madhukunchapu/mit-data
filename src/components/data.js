@@ -1,74 +1,39 @@
 import React, { useState,useEffect } from 'react';
 import {Link,useParams} from 'react-router-dom';
 import axios from 'axios';
-import testUtils from 'react-dom/test-utils';
+
 
  const Data=()=>{
-     const{rollNumber}=useParams(); // it use to capture value coming to url/path
+     const{rollnumber}=useParams(); // it use to capture value coming to url/path
    
     
     const[recordList , setRecordList] = useState([]);
-    const[recordList1 , setRecordList1] = useState([]);
-    const[recordList2 , setRecordList2] = useState([]);
-    const[recordList3 , setRecordList3] = useState([]);
-    const[recordList4 , setRecordList4] = useState([]);
 
     const getRecord = () =>{
-        var url = "https://mti-school-data.onrender.com/academic";
+        var url = "https://mti-school-data.onrender.com/student";
        axios.get(url).then(response=>{
-        let test= response.data.filter(academic => academic.rollNumber==rollNumber);
+        let test= response.data.filter(student => student.rollnumber==rollnumber);
             setRecordList(test)
             
         })
     }
 
-    const getRecord1 = () =>{
-        var url = "https://mti-school-data.onrender.com/emotional";
-       axios.get(url).then(response=>{
-        let test= response.data.filter(academic => academic.rollNumber==rollNumber);
-            setRecordList1(test)
-            
-        })
-    }
-    const getRecord2 = () =>{
-        var url = "https://mti-school-data.onrender.com/skills";
-       axios.get(url).then(response=>{
-        let test= response.data.filter(academic => academic.rollNumber==rollNumber);
-            setRecordList2(test)
-            
-        })
-    }
-    const getRecord3 = () =>{
-        var url = "https://mti-school-data.onrender.com/physical";
-       axios.get(url).then(response=>{
-        let test= response.data.filter(academic => academic.rollNumber==rollNumber);
-            setRecordList3(test)
-            
-        })
-    }
-
-    const getRecord4 = () =>{
-        var url = "https://mti-school-data.onrender.com/achivements";
-       axios.get(url).then(response=>{
-        let test= response.data.filter(academic => academic.rollNumber==rollNumber);
-            setRecordList4(test)
-            
-        })
-    }
         useEffect(()=>{
             getRecord();
-            getRecord1();
-            getRecord2();
-            getRecord3();
-            getRecord4();
+            
         },[true])
 
 
     return (
         <>
-        
-        <div className="container mt-4">
-            <div className="row">
+                <Link to="/:rollNumber/data"><input className="back-btn1" value="Back" /></Link>
+
+        <div>
+
+</div>
+
+<div className="main_container1">
+                <div className="sub_container1">
                 <div >
                     <h1 className="text-danger">Student Details</h1>
                     
@@ -77,15 +42,18 @@ import testUtils from 'react-dom/test-utils';
 
                 <details>
                     
-                    <summary>ACADEMICS DEVELOPMENT</summary>
+                    <summary id='menu3'>ACADEMICS DEVELOPMENT</summary>
                     
-                <table className="table table-bordered">
-                             <thead className='text-primary'>
-                                <tr className="text-primary">
-                                   <th>RollNumber</th>
+                    <table className="table table-bordered ">
+                                <thead>
+                                    <tr>
+                                    <th>RollNumber</th>
                                     <th> StudentName </th>
-                                   <th>Endlish</th>
+                                    <th>Photo</th>
+                                    <th>Class</th>
+                                   <th>English</th>
                                    <th>Hindi</th>
+                                   <th>Telugu</th>
                                    <th>Maths</th>
                                    <th>Science</th>
                                    <th>Social</th>
@@ -94,7 +62,44 @@ import testUtils from 'react-dom/test-utils';
                                    <th>Robotics</th>
                                    <th>General Knowledge</th>
                                    <th>Value Education</th>
-                                   <th>Life Skills</th>
+                                  
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {
+                                        recordList.map((studentinfo) => {
+                                            return (
+                                                <tr key={studentinfo.id}>
+                                                    <td>{studentinfo.rollnumber}</td>
+                                                    <td>{studentinfo.name}</td>
+                                                    <td><img src={studentinfo.photo} height="50" width="50"/></td>
+                                                    <td>{studentinfo.class}</td>
+                                                    <td>{studentinfo.english}</td>
+                                                    <td>{studentinfo.hindi}</td>
+                                                    <td>{studentinfo.telugu}</td>
+                                                    <td>{studentinfo.maths}</td>
+                                                    <td>{studentinfo.science}</td>
+                                                    <td>{studentinfo.social}</td>
+                                                    <td>{studentinfo.es}</td>
+                                                    <td>{studentinfo.ict}</td>
+                                                    <td>{studentinfo.robotics}</td>
+                                                    <td>{studentinfo.gk}</td>
+                                                    <td>{studentinfo.ve}</td>
+                                    
+                                  
+                                                </tr>
+                                            );
+                                        })
+                                    }
+
+                                </tbody>
+                            </table>  
+
+
+                <table className="table table-bordered">
+                             <thead>
+                                <tr>
+                                    <th>Life Skills</th>
                                    <th>II-Maths</th>
                                    <th>IIT-Physics</th>
                                    <th>IIT-Chemistry</th>
@@ -107,27 +112,14 @@ import testUtils from 'react-dom/test-utils';
                                 { recordList.map((studentinfo)=>{
                                         return(
                                             <tr key={studentinfo.id}>
-                                                <td> {studentinfo.rollNumber} </td>
-                                                <td> {studentinfo.studentName} </td>
-                                                <td> {studentinfo.english} </td>
-                                                <td> {studentinfo.hindi} </td>
-                                                <td> {studentinfo.telugu} </td>
-                                                <td> {studentinfo.maths} </td>
-                                                <td> {studentinfo.science} </td>
-                                                <td> {studentinfo.social} </td>
-                                                <td> {studentinfo.environmentalScience} </td>
-                                                <td> {studentinfo.ict} </td>
-                                                <td> {studentinfo.robotics} </td>
-                                                <td> {studentinfo.generalScience} </td>
-                                                <td> {studentinfo.valueEduacation} </td>
-                                                <td> {studentinfo.iitMaths} </td>
-                                                <td> {studentinfo.iitPhysics} </td>
-                                                <td> {studentinfo.iitChemistry} </td>
-                                                <td> {studentinfo.iitReasoning} </td>
-                                                <td> {studentinfo.neetBiology} </td>
-                                                <td> {studentinfo.neetZoology} </td>
+                                                <td> {studentinfo.skills} </td>
+                                                <td> {studentinfo.iitm} </td>
+                                                <td> {studentinfo.iitp} </td>
+                                                <td> {studentinfo.iitc} </td>
+                                                <td> {studentinfo.iitr} </td>
+                                                <td> {studentinfo.neetb} </td>
+                                                <td> {studentinfo.neetz} </td>
                                                 
-                                               
                                             </tr>
                                         );
                                     })
@@ -139,13 +131,11 @@ import testUtils from 'react-dom/test-utils';
                        </details>
                         <details>
                     
-                    <summary>EMOTIONAL DEVELOPMENT</summary>
+                    <summary id='menu3'>EMOTIONAL DEVELOPMENT</summary>
                     
                         <table className="table table-bordered">
                              <thead>
-                                <tr className="text-primary">
-                                   <th>RollNumber</th>
-                                    <th> StudentName </th>
+                                <tr>
                                    <th>AngerManagement</th>
                                    <th>HappinessIndex</th>
                                    <th>DecissionMaking</th>
@@ -157,18 +147,17 @@ import testUtils from 'react-dom/test-utils';
                                 </tr>
                             </thead>
                             <tbody>
-                                { recordList1.map((studentinfo)=>{
+                                { recordList.map((studentinfo)=>{
                                         return(
                                             <tr key={studentinfo.id}>
-                                                <td> {studentinfo.rollNumber} </td>
-                                                <td> {studentinfo.studentName} </td>
-                                                <td> {studentinfo.angerManagement} </td>
-                                                <td> {studentinfo.happinessIndex} </td>
-                                                <td> {studentinfo.decissionMaking} </td>
+                                                <td> {studentinfo.am} </td>
+                                                <td> {studentinfo.happy} </td>
+                                                <td> {studentinfo.dm} </td>
                                                 <td> {studentinfo.obedience} </td>
-                                                <td> {studentinfo.understanding} </td>
+                                                <td> {studentinfo.under} </td>
                                                 <td> {studentinfo.brave} </td>
-                                                <td> {studentinfo.problemSolving} </td>
+                                                <td> {studentinfo.ps} </td>
+                                               
 
                                                 
                                                
@@ -182,13 +171,12 @@ import testUtils from 'react-dom/test-utils';
               </details>
                         <details>
                     
-                    <summary>SKILL/TALENT DEVELOPMENT</summary>
+                    <summary id='menu3'>SKILL/TALENT DEVELOPMENT</summary>
                     
                         <table className="table table-bordered">
                              <thead>
-                                <tr className="text-primary">
-                                   <th>RollNumber</th>
-                                    <th> StudentName </th>
+                                <tr>
+                                   
                                    <th>Techinical</th>
                                    <th>Art</th>
                                    <th>Communication</th>
@@ -202,12 +190,11 @@ import testUtils from 'react-dom/test-utils';
                                 </tr>
                             </thead>
                             <tbody>
-                                { recordList2.map((studentinfo)=>{
+                                { recordList.map((studentinfo)=>{
                                         return(
                                             <tr key={studentinfo.id}>
-                                                <td> {studentinfo.rollNumber} </td>
-                                                <td> {studentinfo.studentName} </td>
-                                                <td> {studentinfo.techinical} </td>
+                                                
+                                                <td> {studentinfo.technical} </td>
                                                 <td> {studentinfo.art} </td>
                                                 <td> {studentinfo.communication} </td>
                                                 <td> {studentinfo.sports} </td>
@@ -228,28 +215,26 @@ import testUtils from 'react-dom/test-utils';
               </details>
                         <details>
                     
-                    <summary>PHYSICAL DEVELOPMENT</summary>
+                    <summary id='menu3'>PHYSICAL DEVELOPMENT</summary>
                     
 
                         <table className="table table-bordered">
                              <thead>
                                 <tr className="text-primary">
-                                   <th>RollNumber</th>
-                                    <th> StudentName </th>
+                                   
                                    <th>Height</th>
                                    <th>Weight</th>
                                    <th>BodyMassIndex</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                { recordList3.map((studentinfo)=>{
+                                { recordList.map((studentinfo)=>{
                                         return(
                                             <tr key={studentinfo.id}>
-                                                <td> {studentinfo.rollNumber} </td>
-                                                <td> {studentinfo.studentName} </td>
-                                                <td> {studentinfo.hegiht} </td>
+                                                
+                                                <td> {studentinfo.height} </td>
                                                 <td> {studentinfo.weight} </td>
-                                                <td> {studentinfo.bodyMassIndex} </td>
+                                                <td> {studentinfo.bmi} </td>
                                                 
                                                
                                             </tr>
@@ -262,23 +247,21 @@ import testUtils from 'react-dom/test-utils';
               </details>
                         <details>
                     
-                    <summary>ACHIVEMENTS DEVELOPMENT</summary>
+                    <summary id='menu3'>ACHIVEMENTS DEVELOPMENT</summary>
                     
                         <table className="table table-bordered">
                              <thead>
                                 <tr className="text-primary">
-                                   <th>RollNumber</th>
-                                    <th> StudentName </th>
+                                  
                                    <th>Achivements</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                { recordList4.map((studentinfo)=>{
+                                { recordList.map((studentinfo)=>{
                                         return(
                                             <tr key={studentinfo.id}>
-                                                <td> {studentinfo.rollNumber} </td>
-                                                <td> {studentinfo.studentName} </td>
-                                                <td> {studentinfo.achivements} </td>
+                                                
+                                                <td> {studentinfo.achive} </td>
                                                 
                                                
                                             </tr>

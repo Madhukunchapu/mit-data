@@ -1,173 +1,471 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
 
-nav{
-	margin:5px;
-	/* padding:15px; */
-	display:grid;
-	/* text-align:center; */
-	
-} 
-
-.logindiv2{
-  position: absolute;
-  top:0.5%;
-  left: 5%;
-  display: flex;
-}
-
-
-
-.logindiv{
-  position: absolute;
-  top:22%;
-  left: 13%;
-}
-
-#menu{
-  /* margin-left:-5px; */
-  padding:20px 25px 20px;
-  text-decoration:none;
-  font-weight:bold;
-  color: rgb(250, 246, 240);
-  border: 2px solid rgba(255, 255, 255, 0.5); 
-  border-radius: 15px;
-  margin: 5px;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 30 rgba(0, 0,0, 0.5);
-   /* display: flex;  */
-}
-
-#menu:hover{
-text-decoration:none;
-background:black;
-color: white;
-}
-
-#menu:focus{
-    text-decoration:none;
-    background:green;
-    color: white;
-    }
+  nav{
+    margin:5px;
+    /* padding:15px; */
+    display:grid;
+    /* text-align:center; */
     
-    .menu2{
-      padding:2px 25px 20px;
-      /* height: 50px; */
+  } 
+
+  .logindiv2{
+    position: absolute;
+    top:0.5%;
+    left: 5%;
+    display: flex;
+  }
+
+
+
+  .logindiv{
+    position: absolute;
+    top:22%;
+    left: 13%;
+  }
+
+  #menu{
+    /* margin-left:-5px; */
+    padding:20px 25px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    color: rgb(250, 246, 240);
+    border: 2px solid rgba(255, 255, 255, 0.5); 
+    border-radius: 15px;
+    margin: 5px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30 rgba(0, 0,0, 0.5);
+    /* display: flex;  */
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    /* -webkit-transition-property: box-shadow, transform; */
+    transition-property: box-shadow, transform
+  }
+
+  #menu:hover{
+  text-decoration:none;
+  background:black;
+  color: white;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);  */
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2);
+
+  }
+  #menu:active{
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2);
+  }
+  #menu:focus{
       text-decoration:none;
-      font-weight:bold;
-      border-radius: 15px;
-      margin: 5px;
-      position: absolute;
-      top: 30%;
-      left: 30%;
-      color:rgb(255, 255, 255);
-      font-size: 40px;
-      font-style: italic;
-      justify-content: center;
-      backdrop-filter: blur(2px);
-    }    
+      background:green;
+      color: white;
+      -webkit-transform: scale(1.2); 
+    transform: scale(1.2);
+      }
+      
+      .menu2{
+        padding:2px 25px 20px;
+        /* height: 50px; */
+        text-decoration:none;
+        font-weight:bold;
+        border-radius: 15px;
+        margin: 5px;
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        color:rgb(255, 255, 255);
+        font-size: 40px;
+        font-style: italic;
+        justify-content: center;
+        backdrop-filter: blur(2px);
+      }    
 
-    .menu1{
-  padding:2px 25px 20px;
-  height: 50px;
-  text-decoration:none;
-  font-weight:bold;
-  border: 2px solid rgba(255, 255, 255, 0.5); 
-  border-radius: 15px;
-  margin: 5px;
-  position: absolute;
-  margin-left: 85%;
-  top: 10px;
-  justify-content: center;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 30 rgba(0, 0,0, 0.5);
-  
-}
-
-.menu1:hover{
-text-decoration:none;
-background:black;
-color: white;
-}
-
-.menu1:focus{
+      .menu1{
+    padding:2px 25px 20px;
+    height: 50px;
     text-decoration:none;
-    background:green;
-    color: white;
-    }
+    font-weight:bold;
+    border: 2px solid rgba(255, 255, 255, 0.5); 
+    border-radius: 15px;
+    margin: 5px;
+    position: absolute;
+    margin-left: 85%;
+    top: 10px;
+    justify-content: center;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30 rgba(0, 0,0, 0.5);
+    
+  }
+
+
+
+
+  .menu1:hover{
+  text-decoration:none;
+  background:black;
+  color: white;
+
+  }
+
+  .menu1:focus{
+      text-decoration:none;
+      background:green;
+      color: white;
+      }
+      
+
+
+  
+
+  .input__search{
+    margin-left: 80px;
+  }
+  .input__search i{
+    position: absolute;
+  }
+  .icon{
+    padding: 5px;
+    margin-top: 3px;
+    padding-left: 10px;
+  }
+  .placehold{
+    width: 300px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding: 5px;
+    margin-top: 2px;
+    padding-left: 30px;
+    border: none;
+    outline: none;
+    background: #82dafa;
+    border-radius: 5px;
+  }
+
+  .list1{
+    position: absolute;
+    top:5%;
+    left: 5%;
+  }
+
+  .list2{
+    position: absolute;
+    top:2%;
+    left: 5%;
+    width: 70% !important;
+  }
+
+  .list3{
+    position: absolute;
+    top:2%;
+    left: 5%;
+    width: 50% !important;
+  }
+  .tb1{
+    width: 50%;
+  }
+
+
+  /****************************/
+
+  .logindiv1{
+    position: absolute;
+    top:12%;
+    left: 45%;
+  }
+
+
+
+
+
+  /* Login Page CSS Starts here */
+
+  /* .logo-top { 
+    width: 350px; 
+    margin: 40px auto; 
+    font-size: 20px; 
+    text-align: center;
+  } */
+  .login { 
+    /* text-align: center; */
+    width: 350px;
+    margin: 25px auto;
+    font-size: 15px;
+  }
+  
+
+  /* The triangle form is achieved by a CSS hack */
+  .login-triangle {
+    width: 0; 
+    margin-right: auto; 
+    margin-left: auto; 
+    border: 16px solid transparent;
+    border-bottom-color: #25468C;}
+  .login-header {
+    margin: 0;
+    margin-bottom: 0; 
+    background: #25468C;
+    padding: 15px; 
+    font-size: 1.4em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    border-top:5px solid #25468C;
+    border-radius: 4px 4px 0 0; 
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.25);
+  }
+  .login-container {
+    background: #ebebeb; 
+    padding: 10px;
+    border-radius: 1px; 
+    border-radius: 0 0 4px 4px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.25);
+  }
+
+
+  .login-container .sign-in {
+    background: #25468C;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.4s  ease-in-out;
+    box-sizing: border-box; 
+    display: block;
+    width: 88%;
+    margin: 15px auto;
+    border-width: 1px; 
+    border-style: solid; 
+    padding: 16px;
+    outline: 0;
+  }
+
+  .buttons{
+    font-family: "Poppins", sans-serif;
+    font-size: 14px; 
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+  }
+
+  .buttons:hover, .buttons:focus,.buttons:active{ 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+    -webkit-transform: scale(1.1); 
+    transform: scale(1.1);
+  }
+
+  /* Login Page CSS ends here */
+
+
+/* ------------------datalist Start here------------- */
+  #menu3{
+    padding:20px 25px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    width: 30%;
+    /* color: b; */
+    border: 2px solid rgba(190, 109, 109, 0.5); 
+    border-radius: 15px;
+    margin: 5px;
+    background-image: linear-gradient(to right, rgb(149, 130, 219) , yellow);
+    box-shadow: 0 0 30 rgba(0, 0,0, 0.5);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform
+  }
+
+  #menu3:hover{
+  text-decoration:none;
+  background:black;
+  color: white;
+    -webkit-transform: scale(1.2); 
+    transform: scale(1.2);
+
+  }
+
+  #menu3:focus{
+      text-decoration:none;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      background:green;
+      color: white;
+      -webkit-transform: scale(1.2); 
+    transform: scale(1.2);
+      }
+
+      .main_container1{
+        text-align:center !important;
+      width: 100%;
+          
+        display: flex;
+       
+        background-size: cover;
+        } 
+  
+        .sub_container1{
+          background:rgba(255, 255, 255, 0.3);
+          border-radius:20px;
+          width: 100%;
+          height: 100vh;
+          padding: 50px;
+          padding-bottom: 50px;
+        }
+  
+
+/* ------------------datalist end here------------- */
+     
+      .acadamicwrapper{
+        
+        padding: 10px;
+        width: 60%;
+        display: flex;
+        gap: 10px;
+        margin-left: 20%;
+        border: 2px solid rgba(224, 172, 172, 0.5); 
+        border-radius: 15px;
+      
+      }
     
 
 
- 
+      .back-btn{
 
-.input__search{
-  margin-left: 80px;
-}
-.input__search i{
-  position: absolute;
-}
-.icon{
-  padding: 5px;
-  margin-top: 3px;
-  padding-left: 10px;
-}
-.placehold{
-  width: 300px;
-  font-size: 12px;
-  margin-bottom: 10px;
-  padding: 5px;
-  margin-top: 2px;
-  padding-left: 30px;
-  border: none;
-  outline: none;
-  background: #82dafa;
-  border-radius: 5px;
-}
+        display: flex;
+        margin-bottom: -30px;
+        margin-left: -20px;
+        width: 40px;
+        border-radius: 50%;
+        /* background: rgb(183, 183, 192); */
+    background-image: linear-gradient(to right, rgb(149, 130, 219) , yellow);
 
-.list1{
-  position: absolute;
-  top:5%;
-  left: 5%;
-}
+      }
+      .back-btn1{
 
-.list2{
-  position: absolute;
-  top:2%;
-  left: 5%;
-  width: 70% !important;
-}
+        display: flex;
+        margin-bottom: -30px;
+        margin-left: 20px;
+        width: 40px;
+        border-radius: 50% !important;
+        /* background: rgb(183, 183, 192); */
+    background-image: linear-gradient(to right, rgb(149, 130, 219) , yellow);
 
-.list3{
-  position: absolute;
-  top:2%;
-  left: 5%;
-  width: 50% !important;
-}
-.tb1{
-  width: 50%;
-}
+      }
+      
+  ------------------------
+    /* .textfield1{ */
+      /* width: 1000px; */
+      /* margin-left: 15% !important; */
+      /* margin-top: 40px; */
+      /* margin-bottom: 400px; */
+    /* } */
 
 
-/****************************/
+    .acadamicwrapper1{
+        
 
-.logindiv{
-  position: absolute;
-  top:22%;
-  left: 13%;
-}
+      display: flex; 
+      
+    }
+      
+    .post_wrapper{
+
+      background:rgba(255, 255, 255, 0.3);
+      border-radius:20px;
+      box-shadow: 0px 0px 29px 2px rgba(0, 0, 0, 0.31);
+      width: 80%;
+      padding-left: 50px;
+      padding-bottom: 20px;
+      margin-left: 8%;
+      margin-top: 30px;
+
+    }
+
+    .post_wrapper1{
+
+      background:rgba(255, 255, 255, 0.3);
+      border-radius:20px;
+      box-shadow: 0px 0px 29px 2px rgba(0, 0, 0, 0.31);
+      width: 50%;
+      padding-left: 50px;
+      padding-bottom: 20px;
+      margin-left: 25%;
+      margin-top: 30px;
+     
+
+    }
 
 
+    .maincontainer{
+    margin-left: 5%;
+
+    } 
+
+    .nextbtn{
+      float: right;
+      margin-right: 5% !important;
+    }
 
 
+/* < -------sdtdentlist start here------> */
+    .main_container{
+      text-align:center !important;
+  width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url(https://img.freepik.com/free-vector/gradient-blur-pink-blue-abstract-background_53876-117324.jpg?w=900&t=st=1675188227~exp=1675188827~hmac=46e28bebc82abe965c3310ec23e2a551abbe1a63dc203e920773f30300c5855c)
+        no-repeat center center fixed;
+      background-size: cover;
+      } 
 
+      .sub_container{
+        background:rgba(255, 255, 255, 0.3);
+        border-radius:20px;
+        box-shadow: 0px 0px 29px 2px rgba(0, 0, 0, 0.31);
+        width: 80%;
+        padding: 50px;
+        padding-bottom: 20px;
+        /* margin-left: 25%; */
+        margin-top: 30px;
+      }
+
+      .links{
+        background: none !important;
+        text-decoration: none;
+      }
+
+      tr{
+        background:rgba(255, 255, 255, 0.3) !important;
+        box-shadow: 0px 0px 29px 2px rgba(0, 0, 0, 0.31);
+        border-radius:50px !important;
+        /* width:100% */
+
+      }
+      td,th{
+        background:rgba(255, 255, 255, 0.3) !important;
+       
+
+      }
+
+    
+/* < -------sdtdentlist end here------> */

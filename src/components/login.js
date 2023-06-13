@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import TextField from '@mui/material/TextField';
+import { Box } from '@material-ui/core';
+
 
 class Login extends Component {
 
@@ -28,23 +31,6 @@ class Login extends Component {
 
 
 
-        // email vaidation
-        let epattern = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        if (!epattern.test(fieldList["myemail"])) {
-            formStatus = false;
-            errorList["emailError"] = "please enter Your mail!";
-        } else {
-            errorList["emailError"] = ""
-        }
-
-
-        //passward validation
-        if (!fieldList["mypassword"] || fieldList["mypassword"].length < 6) {
-            formStatus = false;
-            errorList["passwordError"] = "please enter Your passward";
-        } else {
-            errorList["passwordError"] = ""
-        }
 
 
         //message printing part
@@ -65,17 +51,17 @@ class Login extends Component {
 
 
         if (formStatus == true) {
-            var url = "https://mti-school-data.onrender.com/academic";
+            var url = "https://mti-school-data.onrender.com/student";
             axios.get(url).then(response => {
                 for (var i = 0; i < response.data.length; i++) {
-                    if (email == "adminmit@gmail.com" && pass == "admin@~#&*41!") {
+                    // if (email == "adminmit@gmail.com" && pass == "123456") {
+                        if (email == "adminmit@gmail.com" && pass == "admin@~#&*41!") {
                         localStorage.setItem("username", response.data[i].myname);
                         localStorage.setItem("userid", response.data[i].id);
                         localStorage.setItem("password", response.data[i].mypassword);
                         localStorage.setItem("name", response.data[i].myname1);
                         localStorage.setItem("email", response.data[i].myemail);
                         localStorage.setItem("mobile", response.data[i].mymobile);
-
                         loginStatus = true;
                         break;
                     }// if end
@@ -104,53 +90,40 @@ class Login extends Component {
             <>
                 <div>
                     <img src="loginimage.png" alt="" height="650px" width="100%" />
-
                 </div>
-                <div className="container  logindiv mt-5">            
-                <div className="row">
-                    <div className="col-lg-4"></div>
-                    <div className="col-lg-4">
-                        <p className="text-center text-danger ">{this.state.message}</p>
-                        <form onSubmit={this.login}>
-                            <div className="card">
-                                <div className="card-header bg-light text-danger">
-                                    <i className="fa fa-lock fa-lg"></i>Login
-                                    {/* <label className=" fa fa-pull-right text-warning">
-                                        <Link to="/register" className="text-warning">
-                                            <i className="fa fa-user-plus"></i>
-                                        </Link>
-                                    </label> */}
-                                </div>
-                                <div className="card-body">
-                                    <div className="mb-3">
-                                        <label>E-mail Id</label>
-                                        <input type="text" className="form-control"
-                                            name="myemail" onChange={this.processInput} />
-                                        <small className="text-danger">{this.state.errorList.emailError}</small>
+                <div className="logindiv1">
+                    <div className="logo-top"><img src="Images/Solartis_Logo.png" alt="" /></div>
+                    <p className="text-center text-danger ">{this.state.message}</p>
+                    <div className="login">
+                        <div className="login-triangle"></div>
+                        <h2 className="login-header">LOGIN</h2>
 
-                                    </div>
-                                    <div className="mb-3">
-                                        <label>Password</label>
-                                        <input type="password" maxLength="20" className="form-control"
-                                            name="mypassword" onChange={this.processInput} />
-                                        <small className="text-danger">{this.state.errorList.passwordError}</small>
+                        <form onSubmit={this.login} className="login-container">
 
-                                    </div>
+                            <Box sx={{ width: 400, maxWidth: '100%'}}>
 
+                                <div className='textfield1 mb-3' >
+                                    <TextField label="User Name" fullWidth name="myemail" type='email' onChange={this.processInput} required />
                                 </div>
 
-                                <div className="card-footer text-center">
-                                    <button type="submit" className="btn btn-danger">Login<i className="fa fa-arrow-right"></i></button>
-
-
+                                <div className='textfield1 mb-3'>
+                                    <TextField label="Password" fullWidth name="mypassword" type='password' onChange={this.processInput} required />
                                 </div>
-                            </div>
+                            </Box>
+                            <button type="submit" className="buttons sign-in" value="Login">SIGN IN</button>
+
                         </form>
-                    </div>
-                    <div className="col-lg-4"></div>
 
+                        <div className="ClearFloat"></div>
+                    </div>
                 </div>
-                </div>
+
+
+
+
+
+
+
             </>
         )
     }

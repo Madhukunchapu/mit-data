@@ -5,12 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
+// import StepContext from './components/stepContext';
+// import StepContext from './components/stepContext';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+  // <StepContext>
   <React.StrictMode>
     <App />
+    {/* <StepContext/> */}
   </React.StrictMode>
+  // </StepContext>
 );
+ 
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

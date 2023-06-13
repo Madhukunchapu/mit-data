@@ -2,11 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Switch, Route, Link } from "react-router-dom";
 import PersonalInfo from './studentslist';
 import Data from './data';
-import Academic from './submissions/academic';
-import Emotional from './submissions/emotional';
-import Skills from './submissions/skills';
-import Physical from './submissions/physical';
-import Achivements from './submissions/achivements';
+import StepContext from './stepContext';
+import Acadimic1 from './datasubmission/acadimic';
+import Emotions from './datasubmission/emotionala';
+import Skill from './datasubmission/skills';
+import Physical1 from './datasubmission/physical';
+import Achivements1 from './datasubmission/achivements';
 
 
 
@@ -15,7 +16,7 @@ const TopHeader = () => {
     return (
         <>
             <div>
-                <img src="home1.jpg" alt="" height="650px" width="100%" />
+                <img src="home1.jpg" alt="" height="650" width="100%" />
 
             </div>
             <nav className="logindiv2 p-2">
@@ -24,12 +25,13 @@ const TopHeader = () => {
                         <div className="col-lg-12 ">
                             <nav>
                                 <Link to="/personal" id="menu">PersonalInfo</Link>
-                                <Link to="/:rollNumber/data" id="menu">User Data</Link>
-                                <Link to="/academic" id="menu">Academic</Link>
-                                <Link to="/emotional" id="menu">Emotional</Link>
-                                <Link to="/skills" id="menu">Skills</Link>
-                                <Link to="/physical" id="menu">Physical</Link>
-                                <Link to="/achivements" id="menu">Achivements</Link>
+                                <Link to="/:rollnumber/data" id="menu">User Data</Link>
+                                <Link to="/submission" id="menu">Form Submissions</Link>
+                                <Link to="/" id="menu">Academic</Link>
+                                <Link to="/" id="menu">Emotional</Link>
+                                <Link to="/" id="menu">Skills</Link>
+                                <Link to="/" id="menu">Physical</Link>
+                                <Link to="/" id="menu">Achivements</Link>
                             </nav>
                         </div>
 
@@ -39,14 +41,13 @@ const TopHeader = () => {
                     <Routes>
 
                         <Route path="/personal" element={<PersonalInfo />} />
-                        <Route exact path="/:id/data" element={<Data />} />
-                        <Route exact path="/academic" element={<Academic />} />
-                        <Route exact path="/emotional" element={<Emotional />} />
-                        <Route exact path="/skills" element={<Skills />} />
-                        <Route exact path="/physical" element={<Physical />} />
-                        <Route exact path="/achivements" element={<Achivements />} />
-
-
+                        <Route exact path="/:rollNumber/data" element={<Data />} />
+                        <Route exact path="/submission" element={<StepContext />} />
+                        <Route exact path="/academic" element={<Acadimic1 />} />
+                        <Route exact path="/emotions" element={<Emotions />} />
+                        <Route exact path="/skills" element={<Skill />} />
+                        <Route exact path="/physical" element={<Physical1 />} />
+                        <Route exact path="/achivement" element={<Achivements1 />} />
 
 
 
