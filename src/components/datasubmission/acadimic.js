@@ -18,7 +18,6 @@ function Acadimic1() {
 
                     <h2>Academic Development</h2>
                     <div className='acadamicwrapper1'>
-
                         <div className='inpuboxs'>
 
                             <Box sx={{ width: 300, maxWidth: '100%' }}>
