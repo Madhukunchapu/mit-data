@@ -11,7 +11,7 @@ function Acadimic1() {
     return (
 
         <div>
-            <Link to="/"><input className="back-btn" value="Back" /></Link>
+        
 
             <form>
                 <div className='post_wrapper'>
@@ -34,9 +34,11 @@ function Acadimic1() {
                                         margin="normal" type="text" varient="oulined" color="secondary" required />
                                 </div>
                                 <div>
-                                    <TextField label="student Photo" 
+                                    <h6>Student Photo</h6>
+                                    <TextField  
                                         value={userData['photo']} onChange={(e) => setUserData({ ...userData, "photo": e.target.value })}
                                         margin="normal" type="file" varient="oulined" color="secondary" required />
+                            
                                 </div>
                                 <div>
                                     <TextField label="Class" fullWidth
@@ -152,6 +154,8 @@ function Acadimic1() {
                         </div>
                     </div>
                     <div>
+            <Link  to="/"><Button  variant="contained"  color="secondary">Back</Button></Link>
+
                         <Button className='nextbtn' variant="contained" onClick={() => nextStep()} color="primary">Next</Button><br />
 
                     </div>

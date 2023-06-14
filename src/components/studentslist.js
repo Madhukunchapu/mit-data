@@ -46,7 +46,8 @@ const PersonalInfo = () => {
     return (
 
         <>
-            <Link to="/"><input className="back-btn1" value="Back" /></Link>
+            {/* <Link to="/"> <input className="back-btn1" value="Back" /></Link> */}
+            <Link className='back1' to="/"><button>Back</button></Link>
             
             <div className="main_container">
                 <div className="sub_container">

@@ -11,12 +11,11 @@ function Emotions() {
     return (
 
         <div>
-            <Link to="/"><input className="back-btn" value="Back" /></Link>
 
             <form>
                 <div className='post_wrapper'>
                     <h2>Emotonal Development</h2>
-                    <div className='acadamicwrapper1'>
+                    <div className='acadamicwrapper2'>
 
                         <div className='inpuboxs'>
 

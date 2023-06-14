@@ -11,12 +11,11 @@ function Physical1() {
     return (
 
         <div>
-            <Link to="/"><input className="back-btn" value="Back" /></Link>
 
             <form>
                 <div className='post_wrapper1'>
                     <h2>Skills/Talent Development</h2>
-                    <div className='acadamicwrapper1'>
+                    <div className='acadamicwrapper2'>
 
                         <div className='inpuboxs'>
 

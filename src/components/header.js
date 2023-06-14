@@ -23,15 +23,17 @@ const TopHeader = () => {
                 <div className="container">
                     <div className="row ">
                         <div className="col-lg-12 ">
+                        <img src="logo" alt="" height="150" width="100%"  style={{borderRadius: "50%",marginBottom:"45%"}}/>
+
                             <nav>
                                 <Link to="/personal" id="menu">PersonalInfo</Link>
-                                <Link to="/:rollnumber/data" id="menu">User Data</Link>
+                                {/* <Link to="/:rollnumber/data" id="menu">User Data</Link> */}
                                 <Link to="/submission" id="menu">Form Submissions</Link>
-                                <Link to="/" id="menu">Academic</Link>
+                                {/* <Link to="/" id="menu">Academic</Link>
                                 <Link to="/" id="menu">Emotional</Link>
                                 <Link to="/" id="menu">Skills</Link>
                                 <Link to="/" id="menu">Physical</Link>
-                                <Link to="/" id="menu">Achivements</Link>
+                                <Link to="/" id="menu">Achivements</Link> */}
                             </nav>
                         </div>
 
@@ -70,7 +72,6 @@ const TopHeader = () => {
                 </button>
 
             </div>
-
             <div className="menu2">
 
                 Learning is Not attained by chance,<br />

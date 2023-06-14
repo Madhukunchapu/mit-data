@@ -11,7 +11,6 @@ function Achivements1() {
     return (
 
         <div>
-            <Link to="/"><input className="back-btn" value="Back" /></Link>
 
             <form>
                 <div className='post_wrapper1'>
@@ -24,7 +23,7 @@ function Achivements1() {
                                 <div>
                                     <TextField label="Achivements" multiline rows={4}
                                         value={userData['achive']} onChange={(e) => setUserData({ ...userData, "achive": e.target.value })}
-                                        margin="normal" type="text" varient="oulined" color="secondary" required />
+                                        margin="normal" type="text" varient="oulined" color="secondary" />
                                 </div>
                             </Box>
                         </div>
