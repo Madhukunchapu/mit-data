@@ -3,11 +3,6 @@ import { BrowserRouter as Router, Routes, Switch, Route, Link } from "react-rout
 import PersonalInfo from './studentslist';
 import Data from './data';
 import StepContext from './stepContext';
-import Acadimic1 from './datasubmission/acadimic';
-import Emotions from './datasubmission/emotionala';
-import Skill from './datasubmission/skills';
-import Physical1 from './datasubmission/physical';
-import Achivements1 from './datasubmission/achivements';
 
 
 
@@ -27,13 +22,8 @@ const TopHeader = () => {
 
                             <nav>
                                 <Link to="/personal" id="menu">PersonalInfo</Link>
-                                {/* <Link to="/:rollnumber/data" id="menu">User Data</Link> */}
                                 <Link to="/submission" id="menu">Form Submissions</Link>
-                                {/* <Link to="/" id="menu">Academic</Link>
-                                <Link to="/" id="menu">Emotional</Link>
-                                <Link to="/" id="menu">Skills</Link>
-                                <Link to="/" id="menu">Physical</Link>
-                                <Link to="/" id="menu">Achivements</Link> */}
+                               
                             </nav>
                         </div>
 
@@ -45,11 +35,7 @@ const TopHeader = () => {
                         <Route path="/personal" element={<PersonalInfo />} />
                         <Route exact path="/:rollNumber/data" element={<Data />} />
                         <Route exact path="/submission" element={<StepContext />} />
-                        <Route exact path="/academic" element={<Acadimic1 />} />
-                        <Route exact path="/emotions" element={<Emotions />} />
-                        <Route exact path="/skills" element={<Skill />} />
-                        <Route exact path="/physical" element={<Physical1 />} />
-                        <Route exact path="/achivement" element={<Achivements1 />} />
+                       
 
 
 
