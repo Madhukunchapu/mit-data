@@ -6,11 +6,8 @@ import TopHeader from './components/header';
 import PersonalInfo from './components/studentslist';
 import Data from './components/data';
 import StepContext from './components/stepContext';
-import Achivements1 from './components/datasubmission/achivements';
-import Emotions from './components/datasubmission/emotionala';
-import Skill from './components/datasubmission/skills';
-import Physical1 from './components/datasubmission/physical';
-import Acadimic1 from './components/datasubmission/acadimic';
+
+
 
 
 
@@ -20,15 +17,16 @@ function App() {
     var page = <>
       <Routes>
         <Route exact path="/" element={<Login />} />
+        <Route exact path="/personal" element={<PersonalInfo />} />
+        <Route exact path="/:rollnumber/data" element={<Data />} />
+        <Route exact path="/submission" element={<StepContext />} />
+       
       </Routes>
     </>
   } else {
     var page = <>
       <Routes>
         <Route exact path="/" element={<TopHeader />} />
-        <Route exact path="/personal" element={<PersonalInfo />} />
-        <Route exact path="/:rollnumber/data" element={<Data />} />
-        <Route exact path="/submission" element={<StepContext />} />
         
       </Routes>
     </>

@@ -64,7 +64,6 @@ class Login extends Component {
        
                if(loginStatus==true){
                  this.setState({message:"Login Sucess ! please wait redirecting..."});
-                 window.location.href="http://localhost:3000/#/"; 
                  window.location.reload();
                }else{
                    this.setState({message:"Login Sucess ! Invalid or not exist..."});
