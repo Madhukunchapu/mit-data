@@ -51,7 +51,7 @@ class Login extends Component {
 
 
         if (formStatus == true) {
-            var url = "";
+            var url = "https://mti-school-data.onrender.com/student";
             axios.get(url).then(response => {
                 for (var i = 0; i < response.data.length; i++) {
                         if (email == "adminmit@gmail.com" && pass == "admin@~#&*41!") {

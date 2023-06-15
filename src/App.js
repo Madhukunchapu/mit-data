@@ -13,7 +13,7 @@ import StepContext from './components/stepContext';
 
 function App() {
 
-  if (localStorage.getItem("pass") == null) {
+  if (localStorage.getItem("email") == null) {
     var page = <>
       <Routes>
         <Route exact path="/" element={<Login />} />
