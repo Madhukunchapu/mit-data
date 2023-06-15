@@ -16,7 +16,7 @@ import Acadimic1 from './components/datasubmission/acadimic';
 
 function App() {
 
-  if (localStorage.getItem("userid") == null) {
+  if (localStorage.getItem("userid") == null)  {
     var page = <>
       <Routes>
         <Route exact path="/" element={<Login />} />
