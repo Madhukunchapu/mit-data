@@ -36,7 +36,7 @@ function Acadimic1() {
                                 <div>
                                     <h6>Student Photo</h6>
                                     <TextField  
-                                        value={userData['photo']} onChange={(e) => setUserData({ ...userData, "photo": e.target.value })}
+                                         onChange={(e) => setUserData({ ...userData, "photo": e.target.files[0] })}
                                         margin="normal" type="file" varient="oulined" color="secondary" required />
                             
                                 </div>

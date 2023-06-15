@@ -51,10 +51,9 @@ class Login extends Component {
 
 
         if (formStatus == true) {
-            var url = "https://mti-school-data.onrender.com/student";
+            var url = "";
             axios.get(url).then(response => {
                 for (var i = 0; i < response.data.length; i++) {
-                    // if (email == "adminmit@gmail.com" && pass == "123456") {
                         if (email == "adminmit@gmail.com" && pass == "admin@~#&*41!") {
                         localStorage.setItem("username", response.data[i].myname);
                         localStorage.setItem("userid", response.data[i].id);
@@ -92,7 +91,6 @@ class Login extends Component {
                     <img src="loginimage.png" alt="" height="650px" width="100%" />
                 </div>
                 <div className="logindiv1">
-                    <div className="logo-top"><img src="Images/Solartis_Logo.png" alt="" /></div>
                     <p className="text-center text-danger ">{this.state.message}</p>
                     <div className="login">
                         <div className="login-triangle"></div>

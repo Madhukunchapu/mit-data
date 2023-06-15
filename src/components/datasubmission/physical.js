@@ -19,7 +19,7 @@ function Physical1() {
 
                         <div className='inpuboxs'>
 
-                            <Box sx={{ width: 500 }}>
+                            <Box sx={{ width: 450 }}>
 
                                 <div>
                                     <TextField label="Height" fullWidth

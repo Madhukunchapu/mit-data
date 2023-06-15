@@ -6,17 +6,14 @@ import TopHeader from './components/header';
 import PersonalInfo from './components/studentslist';
 import Data from './components/data';
 import StepContext from './components/stepContext';
-import Achivements1 from './components/datasubmission/achivements';
-import Emotions from './components/datasubmission/emotionala';
-import Skill from './components/datasubmission/skills';
-import Physical1 from './components/datasubmission/physical';
-import Acadimic1 from './components/datasubmission/acadimic';
+
+
 
 
 
 function App() {
 
-  if (localStorage.getItem("email") == null) {
+  if (localStorage.getItem("pass") == null) {
     var page = <>
       <Routes>
         <Route exact path="/" element={<Login />} />
@@ -29,11 +26,7 @@ function App() {
         <Route exact path="/personal" element={<PersonalInfo />} />
         <Route exact path="/:rollnumber/data" element={<Data />} />
         <Route exact path="/submission" element={<StepContext />} />
-        <Route exact path="/academic" element={<Acadimic1 />} />
-        <Route exact path="/emotions" element={<Emotions />} />
-        <Route exact path="/skills" element={<Skill />} />
-        <Route exact path="/physical" element={<Physical1 />} />
-        <Route exact path="/achivement" element={<Achivements1 />} />
+       
       </Routes>
     </>
   }

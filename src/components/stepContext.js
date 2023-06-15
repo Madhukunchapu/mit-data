@@ -11,6 +11,7 @@ const StepContext = () => {
     const [activeStep, setActiveStep] = React.useState(1);
     const [userData, setUserData] = useState([]);
     const [finalData, SetFinalData] = useState([]);
+    const [message, processMessage] = useState("");
 
     const nextStep = () => {
         if (activeStep < 5)
@@ -71,7 +72,8 @@ const StepContext = () => {
         }
         var url = "https://mti-school-data.onrender.com/student";
         axios.post(url, Data).then(response => {
-            console.log(response.inputs);
+            processMessage(userData.name + " Data is submitting Successfully ==>>>> Submit Another Data")
+            console.log(response.userData);
             setUserData('');   
             setActiveStep(1);
 
@@ -81,7 +83,7 @@ const StepContext = () => {
 
     return (
         <div>
-            <multiStepContext.Provider value={{ activeStep, nextStep, previousStep, userData, setUserData, finalData, SetFinalData, submitData }}>
+            <multiStepContext.Provider value={{ message, activeStep, nextStep, previousStep, userData, setUserData, finalData, SetFinalData, submitData }}>
                 <Main />
             </multiStepContext.Provider>
         </div>

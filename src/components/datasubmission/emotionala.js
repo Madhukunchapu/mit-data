@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import { Link } from 'react-router-dom';
 
 function Emotions() {
-    const { nextStep, previousStep, userData, setUserData } = useContext(multiStepContext);
+    const {  nextStep, previousStep, userData, setUserData } = useContext(multiStepContext);
 
     return (
 

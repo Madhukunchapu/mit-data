@@ -95,11 +95,11 @@ const Data = () => {
                         <div className="sub_container1">
 
 
-                            <div>
+                            <div className="tables">
 
                                 {
                                     show && <div>
-                                        <table className="table table-bordered ">
+                                        <table className="table table-bordered  ">
                                             <thead>
                                                 <tr>
                                                     <th>English</th>
@@ -121,6 +121,7 @@ const Data = () => {
                                                     recordList.map((studentinfo) => {
                                                         return (
                                                             <tr key={studentinfo.id}>
+
                                                                 <td>{studentinfo.english}</td>
                                                                 <td>{studentinfo.hindi}</td>
                                                                 <td>{studentinfo.telugu}</td>
@@ -322,18 +323,7 @@ const Data = () => {
 
             </div>
 
-            {/* <!--Main-Container End--> */}
-
-
-
-            {/* <!--Footer-Main Start--> */}
-
-            {/* <div className="Footer-Main">
-                <div className="Copy-Rights">Powered by Mother Theresa CBSE School. © 2023 All Rights Reserved. </div>
-                <div className="ClearFloat"></div>
-            </div> */}
-            {/* <!--Footer-Main End--> */}
-
+           
         </>
     )
 }

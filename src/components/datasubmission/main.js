@@ -14,7 +14,7 @@ import Achivements1 from './achivements';
 
 function Main() {
 
-    const { activeStep } = useContext(multiStepContext);
+    const { activeStep, message } = useContext(multiStepContext);
 
     function showStep(step) {
         console.log(step);
@@ -56,6 +56,7 @@ function Main() {
                     <StepLabel>Achivements Developments</StepLabel>
                 </Step>
             </Stepper>
+            <h5 className="text-center text-danger">{message}</h5>
 
             {showStep(activeStep)}
         

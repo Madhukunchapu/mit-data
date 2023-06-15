@@ -59,8 +59,8 @@ const PersonalInfo = () => {
                                     className="placehold" />
 
                             </div>
-            
                            
+                            
                             <table className="table table-bordered ">
                                 <thead>
                                     <tr>
@@ -94,6 +94,7 @@ const PersonalInfo = () => {
                                                     <td>{userinfo.class}</td>
                                                     <td><img src={userinfo.photo} height="50" width="50"/></td>
                                                 </tr>
+
                                             );
                                         })
                                     }

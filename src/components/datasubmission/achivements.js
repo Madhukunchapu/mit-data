@@ -19,7 +19,7 @@ function Achivements1() {
 
                         <div className='inpuboxs'>
 
-                            <Box component="form" sx={{ '& .MuiTextField-root': { m: 1, width: 500 }, }} noValidate autoComplete="off">
+                            <Box component="form" sx={{ '& .MuiTextField-root': { m: 1, width: 450 }, }} noValidate autoComplete="off">
                                 <div>
                                     <TextField label="Achivements" multiline rows={4}
                                         value={userData['achive']} onChange={(e) => setUserData({ ...userData, "achive": e.target.value })}
