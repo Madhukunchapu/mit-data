@@ -84,9 +84,11 @@ class Login extends Component {
         return (
             <>
                 <div>
-                    <img src="loginimage.png" alt="" height="650px" width="100%" />
+                <img src="logo" alt="" height="250" width="25%"  style={{borderRadius: "50%",marginTop:"5%" ,marginBottom:"45%"}}/>
                 </div>
                 <div className="logindiv1">
+                {/* <img src="logo" alt="" height="150" width="100%"  style={{borderRadius: "50%",marginBottom:"45%"}}/> */}
+
                     <p className="text-center text-danger ">{this.state.message}</p>
                     <div className="login">
                         <div className="login-triangle"></div>

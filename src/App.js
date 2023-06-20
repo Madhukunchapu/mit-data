@@ -6,11 +6,6 @@ import TopHeader from './components/header';
 import PersonalInfo from './components/studentslist';
 import Data from './components/data';
 import StepContext from './components/stepContext';
-import Achivements1 from './components/datasubmission/achivements';
-import Emotions from './components/datasubmission/emotionala';
-import Skill from './components/datasubmission/skills';
-import Physical1 from './components/datasubmission/physical';
-import Acadimic1 from './components/datasubmission/acadimic';
 
 
 
@@ -29,7 +24,7 @@ function App() {
         <Route exact path="/personal" element={<PersonalInfo />} />
         <Route exact path="/:rollnumber/data" element={<Data />} />
         <Route exact path="/submission" element={<StepContext />} />
-        
+       
       </Routes>
     </>
   }

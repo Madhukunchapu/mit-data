@@ -11,7 +11,7 @@ const StepContext = () => {
     const [activeStep, setActiveStep] = React.useState(1);
     const [userData, setUserData] = useState([]);
     const [finalData, SetFinalData] = useState([]);
-    const [message, processMessage] = useState("");
+    const [message, processMessage] = useState("Please Enter Details Bellow ");
 
     const nextStep = () => {
         if (activeStep < 5)
@@ -26,9 +26,10 @@ const StepContext = () => {
 
     const submitData = () => {
         var Data = {
+            
             name:userData.name,
             rollnumber:userData.rollnumber,
-            photo:userData.photo,
+            // photo:userData.photo,
             class:userData.class,
             english:userData.english,
             hindi:userData.hindi,
@@ -70,16 +71,17 @@ const StepContext = () => {
             achive:userData.achive
 
         }
-        var url = "https://mti-school-data.onrender.com/student";
+        processMessage("Please Wait Submitting...");
+        var url = "https://mti-apidata.onrender.com/student";
         axios.post(url, Data).then(response => {
-            processMessage(userData.name + " Data is submitting Successfully ==>>>> Submit Another Data")
+            processMessage(userData.name +" Details Submited  ")
             console.log(response.userData);
             setUserData('');   
             setActiveStep(1);
 
         })
     }
-
+    
 
     return (
         <div>

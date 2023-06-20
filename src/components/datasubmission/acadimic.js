@@ -33,13 +33,13 @@ function Acadimic1() {
                                         value={userData['rollnumber']} onChange={(e) => setUserData({ ...userData, "rollnumber": e.target.value })}
                                         margin="normal" type="text" varient="oulined" color="secondary" required />
                                 </div>
-                                <div>
+                                {/* <div>
                                     <h6>Student Photo</h6>
                                     <TextField  
-                                         onChange={(e) => setUserData({ ...userData, "photo": e.target.files[0] })}
+                                       name="photo"  onChange={(e) => setUserData({ ...userData, "photo": e.target.files[0] })}
                                         margin="normal" type="file" varient="oulined" color="secondary" required />
                             
-                                </div>
+                                </div> */}
                                 <div>
                                     <TextField label="Class" fullWidth
                                         value={userData['class']} onChange={(e) => setUserData({ ...userData, "class": e.target.value })}

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom'; // after installing the react-router-dom we will have to import it here
-import Login from './components/login';
+import Login from './components/table1';
 import TopHeader from './components/header';
 import PersonalInfo from './components/studentslist';
 import Data from './components/data';
