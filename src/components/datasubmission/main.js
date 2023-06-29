@@ -41,7 +41,7 @@ function Main() {
             <Stepper style={{ width: '95%' }} orientation="horizontal" activeStep={activeStep - 1} >
 
                 <Step>
-                    <StepLabel>Acamedics Development</StepLabel>
+                    <StepLabel>Academics Development</StepLabel>
                 </Step>
                 <Step>
                     <StepLabel>Emotional Development</StepLabel>

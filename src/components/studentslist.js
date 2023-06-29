@@ -20,13 +20,13 @@ const PersonalInfo = () => {
        
     const columns = [
         {
-            name: "RollNumber",
+            name: "Student Name",
             selector: info => <Link className='links' to={`/${info.rollnumber}/data`}> {info.name} </Link>,
             sortable: true
 
         },
         {
-            name: "StudentName",
+            name: "Roll Number",
             selector: info => info.rollnumber,
             sortable: true
 

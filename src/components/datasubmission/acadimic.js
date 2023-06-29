@@ -23,7 +23,7 @@ function Acadimic1() {
                             <Box sx={{ width: 300, maxWidth: '100%' }}>
 
                                 <div>
-                                    <TextField label="StudentName" fullWidth
+                                    <TextField label="Student Name" fullWidth
                                         value={userData['name']} onChange={(e) => setUserData({ ...userData, "name": e.target.value })}
                                         margin="normal" type="text" varient="oulined" color="secondary" required />
                                 </div>

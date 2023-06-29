@@ -33,7 +33,7 @@ function UpAcadimic1() {
 
                                 
                                 <div>
-                                    <TextField label="StudentName" fullWidth
+                                    <TextField label="Student Name" fullWidth
                                         value={data.name} onChange={(e)=>setData({...data, name:e.target.value})}
                                         margin="normal" type="text" varient="oulined" color="secondary" required />
                                 </div>

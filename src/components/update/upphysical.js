@@ -14,7 +14,7 @@ function UpPhysical1() {
 
             <form>
                 <div className='post_wrapper1'>
-                    <h2>Skills/Talent Development</h2>
+                    <h2>Physical Development</h2>
                     <div className='acadamicwrapper2'>
 
                         <div className='inpuboxs'>

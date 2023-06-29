@@ -21,7 +21,7 @@ function UpAchivements1() {
 
                             <Box component="form" sx={{ '& .MuiTextField-root': { m: 1, width: 450 }, }} noValidate autoComplete="off">
                                 <div>
-                                    <TextField label="Achivements" multiline rows={4}
+                                    <TextField label="Achievements" multiline rows={4}
                                         value={data.achive} onChange={(e) => setData({ ...data, achive: e.target.value })}
                                         margin="normal" type="text" varient="oulined" color="secondary" />
                                 </div>

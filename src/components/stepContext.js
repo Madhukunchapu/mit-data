@@ -11,7 +11,7 @@ const StepContext = () => {
     const [activeStep, setActiveStep] = React.useState(1);
     const [userData, setUserData] = useState([]);
     const [finalData, SetFinalData] = useState([]);
-    const [message, processMessage] = useState("Please Enter Details Bellow ");
+    const [message, processMessage] = useState("Please Enter The Below Details");
 
     const nextStep = () => {
         if (activeStep < 5)

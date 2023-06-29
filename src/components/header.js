@@ -20,7 +20,7 @@ const TopHeader = () => {
                     <div className="row ">
                         <div className="col-lg-12 ">
                             
-                        <img src="logo" alt="" height="150" width="100%"  style={{borderRadius: "50%",marginBottom:"45%"}}/>
+                        <img src="logo" alt="" height="160" width="80%"  style={{borderRadius: "50%",marginBottom:"45%"}}/>
                           
                             
                             <nav>
