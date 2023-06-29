@@ -38,7 +38,7 @@ const Data = () => {
         <>
             <div id="Main-Container">
                 <div className="Banner-Top-Main">
-                    <h1 className="text-danger">Student Details</h1>
+                    <h1 className="text-danger">Student Marks List</h1>
 
                     <table className="table table-bordered">
                         <thead>
@@ -47,7 +47,7 @@ const Data = () => {
                                 <th>RollNumber</th>
                                 <th>Student Name</th>
                                 <th>Class</th>
-                                <th>Photo</th>                                </tr>
+                                                                </tr>
                         </thead>
                         <tbody>
                             {recordList.map((studentinfo) => {
@@ -57,7 +57,6 @@ const Data = () => {
                                         <td>{studentinfo.rollnumber}</td>
                                         <td>{studentinfo.name}</td>
                                         <td>{studentinfo.class}</td>
-                                        <td><img src={studentinfo.photo} height="50" width="50" /></td>
 
 
                                     </tr>

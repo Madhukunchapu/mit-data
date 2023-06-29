@@ -51,7 +51,7 @@ class Login extends Component {
 
 
         if(formStatus==true){
-            var url = "https://mti-school-data.onrender.com/user";
+            var url = "https://mti-apidata.onrender.com/user";
             axios.get(url).then(response => {
                for (var i = 0; i < response.data.length; i++) {
                  if (email == response.data[i].myemail && pass == response.data[i].mypassword) {
@@ -84,12 +84,17 @@ class Login extends Component {
         return (
             <>
                 <div>
-                <img src="logo" alt="" height="250" width="25%"  style={{borderRadius: "50%",marginTop:"5%" ,marginBottom:"45%"}}/>
+                <h1 style={{marginTop:"-45%", marginBottom:"15%",color:"blue",fontSize:"36px", marginLeft:"27%"}}>MOTHER THERESA ENGLISH MEDIUM SCHOOL
+            <p style={{color:"white",fontSize:"22px", marginLeft:"15%"}}>AFFILIATED TO CBSE, New Delhi, Aff. No.-130687</p>
+            <p style={{color:"white",fontSize:"20px"}}>Lingapuram(V), Muthukur(P), Peddapanjani(M), Chittoor, Andhra Pradesh, India,517247</p>
+            </h1>
+            <img src="school2.jpg" alt="" height="950px" width="100%" />
                 </div>
                 <div className="logindiv1">
                 {/* <img src="logo" alt="" height="150" width="100%"  style={{borderRadius: "50%",marginBottom:"45%"}}/> */}
+                <img src="logo" alt="" height="200" width="50%"  style={{borderRadius: "50%",marginTop: "-10%",marginLeft:"-400px" ,marginBottom:"-35%"}}/>
 
-                    <p className="text-center text-danger ">{this.state.message}</p>
+                    <h4 className="text-center text-danger ">{this.state.message}</h4>
                     <div className="login">
                         <div className="login-triangle"></div>
                         <h2 className="login-header">LOGIN</h2>

@@ -141,6 +141,7 @@ nav{
   border: 2px solid rgba(255, 255, 255, 0.5); 
   border-radius: 15px;
   margin: 5px;
+  font-size: 20px;
   backdrop-filter: blur(20px);
   box-shadow: 0 0 30 rgba(0, 0,0, 0.5);
   /* display: flex;  */
@@ -202,6 +203,7 @@ color: white;
   margin-left: 85%;
   top: 10px;
   justify-content: center;
+  color: red !important;
   backdrop-filter: blur(20px);
   box-shadow: 0 0 30 rgba(0, 0,0, 0.5);
   
@@ -303,9 +305,9 @@ width: 100%;
 .Home-Left-Menu-Main{float: left; width: 19%; left: 100px;}
 
 .wrapper{display: flex;z-index: 1; left: 0; }
-.wrapper .sidebar{ margin-top: -165px; width: 19%;  height: 100%;background-image: linear-gradient(to right, rgb(134, 209, 14) , rgb(224, 224, 14));box-shadow: 8px 0px 8px 0px rgba(0, 0, 0, 0.25);padding-left:  0px;position: fixed ;  }
+.wrapper .sidebar{ margin-top: -140px; width: 19%;  height: 100%;background-image: linear-gradient(to right, rgb(14, 27, 209) , rgb(138, 140, 243));box-shadow: 8px 0px 8px 0px rgba(0, 0, 0, 0.25);padding-left:  0px;position: fixed ;  }
 .wrapper .sidebar ul{padding: 15px;list-style: none;font-size: 17px; padding-top: 10px;padding-bottom: 10px;}  
-.Banner-Top-Main{margin-left: 19%; height: 165px; text-align: center; box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.10); position:fixed; 
+.Banner-Top-Main{margin-left: 19%; height: 140px; text-align: center; box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.10); position:fixed; 
   width: 82%; position: sticky; top: 0%; background: #ffffff; z-index: 1;}
   
 

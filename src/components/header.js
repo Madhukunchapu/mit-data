@@ -19,8 +19,10 @@ const TopHeader = () => {
                 <div className="container">
                     <div className="row ">
                         <div className="col-lg-12 ">
+                            
                         <img src="logo" alt="" height="150" width="100%"  style={{borderRadius: "50%",marginBottom:"45%"}}/>
-
+                          
+                            
                             <nav>
                                 <Link to="/personal" id="menu">PersonalInfo</Link>
                                 <Link to="/submission" id="menu">Form Submissions</Link>
@@ -37,9 +39,6 @@ const TopHeader = () => {
                         <Route exact path="/:rollNumber/data" element={<Data />} />
                         <Route exact path="/submission" element={<StepContext />} />
                        
-
-
-
                     </Routes>
 
 
@@ -55,12 +54,17 @@ const TopHeader = () => {
 
             <div className="menu1">
                 <button className="btn btn-white" onClick={Logout}>
-                    <h4><Link to="/"> <i className="fa fa-power-off  ">Logout</i></Link> </h4>
+                    <h4 style={{color:"red"}}> <i className="fa fa-power-off  ">Logout</i> </h4>
                 </button>
+               
 
             </div>
+            
+            <h1 style={{marginTop:"-45%", marginBottom:"15%",color:"blue",fontSize:"36px", marginLeft:"27%"}}>MOTHER THERESA ENGLISH MEDIUM SCHOOL
+            <p style={{color:"white",fontSize:"22px", marginLeft:"15%"}}>AFFILIATED TO CBSE, New Delhi, Aff. No.-130687</p>
+            <p style={{color:"white",fontSize:"20px"}}>Lingapuram(V), Muthukur(P), Peddapanjani(M), Chittoor, Andhra Pradesh, India,517247</p>
+            </h1>
             <div className="menu2">
-
                 Learning is Not attained by chance,<br />
                 &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;        it must be sought for<br />
                 &nbsp; &nbsp;&nbsp;&nbsp;                           with ardor and attended to <br />

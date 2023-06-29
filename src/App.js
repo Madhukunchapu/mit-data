@@ -6,6 +6,7 @@ import TopHeader from './components/header';
 import PersonalInfo from './components/studentslist';
 import Data from './components/data';
 import StepContext from './components/stepContext';
+import StepContext1 from './components/stepContext1';
 
 
 
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/personal" element={<PersonalInfo />} />
         <Route exact path="/:rollnumber/data" element={<Data />} />
         <Route exact path="/submission" element={<StepContext />} />
+        <Route exact path="/update/:id" element={<StepContext1 />} />
        
       </Routes>
     </>
