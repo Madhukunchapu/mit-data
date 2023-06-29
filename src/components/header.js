@@ -12,7 +12,7 @@ const TopHeader = () => {
     return (
         <>
             <div>
-                <img src="home1.jpg" alt="" height="650" width="100%" />
+                <img src="school3.jpg" alt="" height="650" width="100%" />
 
             </div>
             <nav className="logindiv2 p-2">
@@ -61,8 +61,8 @@ const TopHeader = () => {
             </div>
             
             <h1 style={{marginTop:"-45%", marginBottom:"15%",color:"blue",fontSize:"36px", marginLeft:"27%"}}>MOTHER THERESA ENGLISH MEDIUM SCHOOL
-            <p style={{color:"white",fontSize:"22px", marginLeft:"15%"}}>AFFILIATED TO CBSE, New Delhi, Aff. No.-130687</p>
-            <p style={{color:"white",fontSize:"20px"}}>Lingapuram(V), Muthukur(P), Peddapanjani(M), Chittoor, Andhra Pradesh, India,517247</p>
+            <p style={{color:"red",fontSize:"22px", marginLeft:"15%"}}>AFFILIATED TO CBSE, New Delhi, Aff. No.-130687</p>
+            <p style={{color:"black",fontSize:"20px"}}>Lingapuram(V), Muthukur(P), Peddapanjani(M), Chittoor, Andhra Pradesh, India,517247</p>
             </h1>
             <div className="menu2">
                 Learning is Not attained by chance,<br />

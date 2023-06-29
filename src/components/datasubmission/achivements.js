@@ -14,7 +14,7 @@ function Achivements1() {
 
             <form>
                 <div className='post_wrapper1'>
-                    <h2>Achivements Development</h2>
+                    <h2>Achievements Development</h2>
                     <div className='acadamicwrapper1'>
 
                         <div className='inpuboxs'>

@@ -25,7 +25,7 @@ function UpAcadimic1() {
             <form>
                 <div className='post_wrapper'>
 
-                    <h2>Academic Development</h2>
+                    <h2>Academics Development</h2>
                     <div className='acadamicwrapper1'>
                         <div className='inpuboxs'>
 

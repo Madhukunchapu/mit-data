@@ -20,7 +20,7 @@ const Data = () => {
     const [recordList, setRecordList] = useState([]);
 
     const getRecord = () => {
-        var url = "https://mti-school-data.onrender.com/student";
+        var url = "https://mti-apidata.onrender.com/student";
         axios.get(url).then(response => {
             let test = response.data.filter(student => student.rollnumber == rollnumber);
             setRecordList(test)
@@ -75,11 +75,11 @@ const Data = () => {
 
                             <ul>
                                 <Link className='back' to="/"><button>Back</button></Link>
-                                <p id='menu3' onClick={() => setShow(!show)}> Academic Developnrmt</p>
-                                <p id='menu3' onClick={() => setShow2(!show2)}> Emotional Developnrmt</p>
-                                <p id='menu3' onClick={() => setShow3(!show3)}> Skill/Talent Developnrmt</p>
-                                <p id='menu3' onClick={() => setShow4(!show4)}>Physical Developnrmt</p>
-                                <p id='menu3' onClick={() => setShow5(!show5)}> Achivement Developnrmt</p>
+                                <p id='menu3' onClick={() => setShow(!show)}> Academics Development</p>
+                                <p id='menu3' onClick={() => setShow2(!show2)}> Emotional Development</p>
+                                <p id='menu3' onClick={() => setShow3(!show3)}> Skill/Talent Development</p>
+                                <p id='menu3' onClick={() => setShow4(!show4)}>Physical Development</p>
+                                <p id='menu3' onClick={() => setShow5(!show5)}> Achievement Development</p>
                             </ul>
                         </div>
                     </div>
@@ -98,6 +98,7 @@ const Data = () => {
 
                                 {
                                     show && <div>
+                                        <h3>Academics Development</h3>
                                         <table className="table table-bordered  ">
                                             <thead>
                                                 <tr>
@@ -177,6 +178,8 @@ const Data = () => {
                                 }
                                 {
                                     show2 &&
+                                    <div>
+                                    <h3>Emotional Development</h3>
                                     <table className="table table-bordered">
                                         <thead>
                                             <tr>
@@ -212,9 +215,12 @@ const Data = () => {
 
                                         </tbody>
                                     </table>
+                                    </div>
                                 }
                                 {
                                     show3 &&
+                                    <div>
+                                        <h3>Skill/Talent Development</h3>
                                     <table className="table table-bordered">
                                         <thead>
                                             <tr>
@@ -254,9 +260,12 @@ const Data = () => {
 
                                         </tbody>
                                     </table>
+                                    </div>
                                 }
                                 {
                                     show4 &&
+                                    <div>
+                                        <h3>Physical Development</h3>
                                     <table className="table table-bordered">
                                         <thead>
                                             <tr className="text-primary">
@@ -283,9 +292,12 @@ const Data = () => {
 
                                         </tbody>
                                     </table>
+                                    </div>
                                 }
                                 {
                                     show5 &&
+                                    <div>
+                                    <h3>Achievements Development</h3>
                                     <table className="table table-bordered">
                                         <thead>
                                             <tr className="text-primary">
@@ -308,6 +320,7 @@ const Data = () => {
 
                                         </tbody>
                                     </table>
+                                    </div>
                                 }
 
 

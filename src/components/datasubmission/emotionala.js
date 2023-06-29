@@ -14,7 +14,7 @@ function Emotions() {
 
             <form>
                 <div className='post_wrapper'>
-                    <h2>Emotonal Development</h2>
+                    <h2>Emotional Development</h2>
                     <div className='acadamicwrapper2'>
 
                         <div className='inpuboxs'>

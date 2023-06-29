@@ -41,7 +41,7 @@ function UpMain() {
             <Stepper style={{ width: '95%' }} orientation="horizontal" activeStep={activeStep - 1} >
 
                 <Step>
-                    <StepLabel>Acamedic Development</StepLabel>
+                    <StepLabel>Acamedics Development</StepLabel>
                 </Step>
                 <Step>
                     <StepLabel>Emotional Development</StepLabel>
@@ -53,7 +53,7 @@ function UpMain() {
                     <StepLabel>Physical Development</StepLabel>
                 </Step>
                 <Step>
-                    <StepLabel>Achivements Developments</StepLabel>
+                    <StepLabel>Achievements Developments</StepLabel>
                 </Step>
             </Stepper>
             <h5 className="text-center text-danger">{message}</h5>
