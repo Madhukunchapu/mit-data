@@ -24,7 +24,7 @@ const StepContext1 = () => {
     
     
     useEffect(() => {
-        axios.get("https://mti-school-data.onrender.com/student/"+id)
+        axios.get("https://mti-apidata.onrender.com/student/"+id)
         .then(res => setData(res.data))
         .catch(err=>console.log(err))
 

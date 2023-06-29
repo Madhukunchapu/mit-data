@@ -75,7 +75,7 @@ function handelSubmit(id){
         axios.delete("https://mti-apidata.onrender.com/student/"+id)
         .then(res=>{
             alert('record has deleted');
-            navigate('/')
+            navigate('/personal')
         }).catch(err=> console.log(err))
     }
 }

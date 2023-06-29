@@ -11,22 +11,15 @@ import { Link } from 'react-router-dom';
 import {  useParams } from 'react-router-dom';
 
 function UpAcadimic1() {
-    const { activeStep,data, studentinfo, nextStep,  setData } = useContext(multiStepContext);
-    // const {id} = useParams(); // it use to capture value coming to url/path
+    const { data, nextStep,  setData } = useContext(multiStepContext);
+    const {id} = useParams(); // it use to capture value coming to url/path
 
-    // const [data, setData] = useState([]);
-    // useEffect(() => {
-    //     axios.get("https://mti-school-data.onrender.com/student/"+id)
-    //     .then(res => setData(res.data))
-    //     .catch(err=>console.log(err))
-    //     // getRecord();
-
-    // }, [])
-
+    
 
     return (
 
         <div>
+        
         
 
             <form>
@@ -38,6 +31,7 @@ function UpAcadimic1() {
 
                             <Box sx={{ width: 300, maxWidth: '100%' }}>
 
+                                
                                 <div>
                                     <TextField label="StudentName" fullWidth
                                         value={data.name} onChange={(e)=>setData({...data, name:e.target.value})}
@@ -49,13 +43,7 @@ function UpAcadimic1() {
                                         value={data.rollnumber}  onChange={(e) => setData({ ...data, rollnumber: e.target.value })}
                                         margin="normal" type="text" varient="oulined" color="secondary" required />
                                 </div>
-                                {/* <div>
-                                    <h6>Student Photo</h6>
-                                    <TextField  
-                                       name="photo"  onChange={(e) => setUserData({ ...userData, "photo": e.target.files[0] })}
-                                        margin="normal" type="file" varient="oulined" color="secondary" required />
-                            
-                                </div> */}
+                               
                                 <div>
                                     <TextField label="Class" fullWidth
                                         value={data.class}onChange={(e) => setData({ ...data, class: e.target.value })}
@@ -177,6 +165,7 @@ function UpAcadimic1() {
                     </div>
                 </div>
             </form>
+    
         </div>
     );
 }
